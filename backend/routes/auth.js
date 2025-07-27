@@ -22,7 +22,7 @@ const loginValidation = [
 ]
 
 // POST /api/auth/register - Register new user
-router.post('/register', registerValidation, async (req, res) => {
+router.post('https://cine-pulsebackend.vercel.app/api/auth/register', registerValidation, async (req, res) => {
   try {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
@@ -73,7 +73,7 @@ router.post('/register', registerValidation, async (req, res) => {
 })
 
 // POST /api/auth/login - Login user
-router.post('/login', loginValidation, async (req, res) => {
+router.post('https://cine-pulsebackend.vercel.app/api/auth/login', loginValidation, async (req, res) => {
   try {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
