@@ -4,7 +4,7 @@ import { sampleMovies } from '../data/sampleMovies.js'
 
 const seedMovies = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/movieshuttle')
+    await mongoose.connect('mongodb+srv://MovieShuttle:MovieShuttle2025@movieshuttle.5ouu8uq.mongodb.net/?retryWrites=true&w=majority&appName=MovieShuttle')
     
     // Clear existing movies
     await Movie.deleteMany({})
