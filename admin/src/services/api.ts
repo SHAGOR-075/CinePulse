@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Movie, CreateMovieData, UpdateMovieData } from '../types/movie'
 
-const API_BASE_URL = 'http://localhost:5000/api'
+const API_BASE_URL = 'https://cine-pulsebackend.vercel.app/api'               // Update with your actual API base URL                        
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -29,7 +29,7 @@ api.interceptors.response.use(
 export const movieApi = {
   getMovies: async (): Promise<Movie[]> => {
     try {
-      const response = await api.get('/movies')
+      const response = await api.get('https://cine-pulsebackend.vercel.app/api/movies')
       return response.data.data || response.data || []
     } catch (error) {
       console.error('Error fetching movies:', error)
@@ -39,7 +39,7 @@ export const movieApi = {
 
   getMovie: async (id: string): Promise<Movie> => {
     try {
-      const response = await api.get(`/movies/${id}`)
+      const response = await api.get(`https://cine-pulsebackend.vercel.app/api/movies/${id}`)
       return response.data.data || response.data
     } catch (error) {
       console.error('Error fetching movie:', error)
@@ -49,7 +49,7 @@ export const movieApi = {
 
   createMovie: async (data: CreateMovieData): Promise<Movie> => {
     try {
-      const response = await api.post('/movies', data)
+      const response = await api.post('https://cine-pulsebackend.vercel.app/api/movies', data)
       return response.data.data || response.data
     } catch (error) {
       console.error('Error creating movie:', error)
@@ -59,7 +59,7 @@ export const movieApi = {
 
   updateMovie: async (id: string, data: UpdateMovieData): Promise<Movie> => {
     try {
-      const response = await api.put(`/movies/${id}`, data)
+      const response = await api.put(`https://cine-pulsebackend.vercel.app/api/movies/${id}`, data)
       return response.data.data || response.data
     } catch (error) {
       console.error('Error updating movie:', error)
@@ -69,7 +69,7 @@ export const movieApi = {
 
   deleteMovie: async (id: string): Promise<void> => {
     try {
-      await api.delete(`/movies/${id}`)
+      await api.delete(`https://cine-pulsebackend.vercel.app/api/movies/${id}`)
     } catch (error) {
       console.error('Error deleting movie:', error)
       throw error
@@ -78,7 +78,7 @@ export const movieApi = {
 
   getStats: async () => {
     try {
-      const response = await api.get('/movies/stats')
+      const response = await api.get('https://cine-pulsebackend.vercel.app/api/movies/stats')
       return response.data.data || response.data
     } catch (error) {
       console.error('Error fetching stats:', error)
