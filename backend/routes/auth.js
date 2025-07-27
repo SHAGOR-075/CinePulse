@@ -140,7 +140,7 @@ router.post('https://cine-pulsebackend.vercel.app/api/auth/login', loginValidati
 })
 
 // GET /api/auth/me - Get current user
-router.get('/me', auth, async (req, res) => {
+router.get('https://cine-pulsebackend.vercel.app/api/auth/me', auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.userId)
     if (!user) {
@@ -164,7 +164,7 @@ router.get('/me', auth, async (req, res) => {
 })
 
 // PUT /api/auth/profile - Update user profile
-router.put('/profile', auth, async (req, res) => {
+router.put('https://cine-pulsebackend.vercel.app/api/auth/profile', auth, async (req, res) => {
   try {
     const { email } = req.body
     const userId = req.user.userId
@@ -208,7 +208,7 @@ router.put('/profile', auth, async (req, res) => {
 })
 
 // PUT /api/auth/change-password - Change password
-router.put('/change-password', auth, [
+router.put('https://cine-pulsebackend.vercel.app/api/auth/change-password', auth, [
   body('currentPassword').notEmpty().withMessage('Current password is required'),
   body('newPassword').isLength({ min: 6 }).withMessage('New password must be at least 6 characters long')
 ], async (req, res) => {
