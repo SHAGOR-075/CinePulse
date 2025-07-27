@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000
 // Security middleware
 app.use(helmet())
 app.use(cors({
-  origin: ['https://cinepulse-client.netlify.app', 'https://cinepulse-admin.netlify.app'],
+  origin: ['https://cinepulse-client.netlify.app', 'https://cine-pulse-admin.vercel.app'],
   methods: ["POST", "GET", "PUT", "DELETE"],
   credentials: true
 }))
