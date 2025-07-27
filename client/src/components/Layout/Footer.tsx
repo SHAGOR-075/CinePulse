@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <span className="text-2xl font-bold">CinePulse</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              Your ultimate destination for downloading the latest movies in HD quality. 
+              Your ultimate destination for downloading the latest movies in HD quality.
               Discover thousands of movies across all genres and enjoy seamless downloads.
             </p>
             <div className="flex space-x-4">
