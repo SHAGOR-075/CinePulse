@@ -6,7 +6,7 @@ import { auth } from '../middleware/auth.js'
 
 const router = express.Router()
 
-const JWT_SECRET = process.env.JWT_SECRET || 'movieshuttle-secret-key-2024'
+const JWT_SECRET = process.env.JWT_SECRET || '25de87d4184f98daafcdb1bb3d212ba8'
 const JWT_EXPIRE = process.env.JWT_EXPIRE || '7d'
 
 // Validation middleware

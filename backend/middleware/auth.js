@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import User from '../models/User.js'
 
-const JWT_SECRET = process.env.JWT_SECRET || 'movieshuttle-secret-key-2024'
+const JWT_SECRET = process.env.JWT_SECRET || '25de87d4184f98daafcdb1bb3d212ba8'
 
 // Authentication middleware
 export const auth = async (req, res, next) => {
